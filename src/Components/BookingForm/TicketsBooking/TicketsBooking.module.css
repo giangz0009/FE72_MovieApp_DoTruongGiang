@@ -1,0 +1,70 @@
+.smallBox {
+  list-style: none;
+  display: inline-flex;
+  align-items: center;
+  margin-right: 20px;
+  color: white;
+}
+
+.smallBox::before {
+  content: "";
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin-right: 10px;
+}
+
+.smallBoxGreen::before {
+  background-color: green;
+}
+
+.smallBoxRed::before {
+  background-color: red;
+}
+
+.smallBoxEmpty::before {
+  background-color: white;
+  box-shadow: inset 0px 2px 3px 0px rgb(255 152 0),
+    0px 1px 0px 0px rgb(255 255 255 / 80%);
+}
+
+#seatsBlock tbody tr:nth-child(7) td {
+  padding-top: 30px;
+}
+
+#seatsBlock tbody tr td:first-child {
+  padding-right: 10px;
+}
+
+#seatsBlock tbody tr td:nth-child(8) {
+  padding-left: 30px;
+}
+
+.seats input {
+  position: relative;
+  cursor: pointer;
+}
+
+.seats input::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 31px;
+  height: 24px;
+  border-radius: 5px;
+  display: inline-block;
+  border: 3px solid #ff9800;
+  box-shadow: inset 0px 2px 3px 0px rgb(0 0 0 / 30%),
+    0px 1px 0px 0px rgb(255 255 255 / 80%);
+  background-color: white;
+}
+
+.seats input[type="checkbox"]:checked:before {
+  background-color: green;
+}
+
+.seatsBooked input[type="checkbox"]:checked::before {
+  background-color: red;
+}
