@@ -70,6 +70,10 @@ export class TicketsBooking extends Component {
   handleSubmit = () => {
     // console.log(isEmpty(this.props.activeUser));
     // if (isEmpty(this.props.activeUser)) {
+
+    if (this.props.activeUser.numberOfSeats > 0)
+      return alert("Vui lòng chọn đủ số ghế đã đặt!");
+
     const action = {
       type: "BOOK_SEAT",
       payload: this.props.activeUser.bookedSeats,

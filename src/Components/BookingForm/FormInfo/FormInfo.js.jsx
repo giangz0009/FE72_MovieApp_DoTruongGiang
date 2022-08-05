@@ -29,6 +29,9 @@ export class FormInfo extends Component {
 
   handleStartSelectingSeat = () => {
     // if (isEmpty(this.props.activeUser)) {
+    if (this.refInputNumberOfSeats.current.value * 1 > 10)
+      return alert("Không được đặt quá 10 chỗ 1 lúc!");
+
     const resultData = {
       name: this.refInputUserName.current.value,
       numberOfSeats: this.refInputNumberOfSeats.current.value * 1,
