@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from "react";
-import FormInfo from "./FormInfo/FormInfo.js";
-import TicketsBooking from "./TicketsBooking/TicketsBooking.js.jsx";
+import FormInfo from "./FormInfo/FormInfo.jsx";
+import TicketsBooking from "./TicketsBooking/TicketsBooking.jsx";
 import { connect } from "react-redux/es/exports.js";
 import isEmpty from "lodash.isempty";
 
